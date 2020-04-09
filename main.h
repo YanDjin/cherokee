@@ -11,13 +11,17 @@
 #include <arpa/inet.h>
 #include <pthread.h>
 
-int running = 0;
+int running = 1;
 char* rootPath = "/home/yan/Documents/cherokee/testFolder";
-char* port = "80";
+int port = 80;
 char* ipAddress = "127.0.0.1";
 int serverSocket;
 int clientSocket;
-char request[2048];
-char* response = "lalalala";
+
+char request[4096];
+char response[] = 
+"HTTP/1.1 200 OK\r\n"
+"Content-Type: text/html; charset=UTF-8\r\n\r\n"
+"lalalala\r\n\r\n";
 
 #endif //CHEROKEE_MAIN_H
