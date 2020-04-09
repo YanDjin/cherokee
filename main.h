@@ -13,9 +13,11 @@
 
 int running = 0;
 char* rootPath = "/home/yan/Documents/cherokee/testFolder";
-int port = 80;
+char* port = "80";
 char* ipAddress = "127.0.0.1";
 int serverSocket;
 int clientSocket;
+char request[2048];
+char* response = "lalalala";
 
 #endif //CHEROKEE_MAIN_H

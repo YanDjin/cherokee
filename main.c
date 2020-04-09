@@ -20,8 +20,10 @@ int main() {
         perror("listen()");
     }
 
+    memset(request, '\0', 2048);
     while((clientSocket = accept(serverSocket, (struct sockaddr*)&client_addr, &client_addr_len))){
-
+        read(clientSocket, request, 2048);
+        write(serverSocket, response, strlen(response));
     }
     return 0;
 }
