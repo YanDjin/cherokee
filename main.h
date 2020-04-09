@@ -1,7 +1,3 @@
-//
-// Created by Yan on 09/04/2020.
-//
-
 #ifndef CHEROKEE_MAIN_H
 #define CHEROKEE_MAIN_H
 
@@ -16,7 +12,7 @@
 #include <pthread.h>
 
 int running = 0;
-char* rootPath = "C:\\Users\\Yan\\Documents\\Projects\\ETNA\\Cherokee\\test_folder";
+char* rootPath = "/home/yan/Documents/cherokee/testFolder";
 int port = 80;
 char* ipAddress = "127.0.0.1";
 int serverSocket;

@@ -4,7 +4,7 @@ CFLAGS = -Wall -Wextra -Werror
 
 THREADS = -pthread
 
-NAME = bomberman
+NAME = http_server_exec
 
 RM = rm -rf
 
@@ -12,15 +12,13 @@ SRC = $(wildcard *.c)
 
 OBJ = $(SRC:.c=.o)
 
-LIB =  -lSDL2 -lSDL2_image -lSDL2_ttf
-
 all : $(NAME)
 
 %.o : %.c
 	$(CC) -o $@ -c $<
 
 $(NAME) : $(OBJ)
-	$(CC) $(CFLAGS) $(THREADS) -o $@ $^ $(LIB)
+	$(CC) $(CFLAGS) $(THREADS) -o $@ $^
 
 clean :
 	$(RM) *.o
